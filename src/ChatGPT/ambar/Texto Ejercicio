@@ -1,0 +1,51 @@
+Here's a Java programming problem that integrates physics concepts with object-oriented programming, specifically using abstract classes and interfaces.
+
+---
+
+### **Problem Statement:**
+You are designing a **Physics Simulation System** in Java. The system should be able to simulate different types of motion based on Newtonian mechanics. Your goal is to create an application where different objects (like a **ball**, a **car**, or a **rocket**) move based on their respective physical properties.
+
+---
+
+### **Requirements:**
+1. **Create an abstract class `MovingObject`** that:
+   - Has attributes for `mass` (kg) and `velocity` (m/s).
+   - Defines an abstract method `updatePosition(double time)`, which updates the position after a given time.
+
+2. **Create an interface `ForceApplicable`** that:
+   - Defines a method `applyForce(double force, double time)`, which updates the velocity of the object based on Newton's Second Law of Motion:
+     \[
+     a = \frac{F}{m}
+     \]
+     \[
+     v = u + at
+     \]
+     Where:
+     - \( a \) is acceleration
+     - \( F \) is the applied force
+     - \( m \) is mass
+     - \( v \) is final velocity
+     - \( u \) is initial velocity
+     - \( t \) is time duration
+
+3. **Create at least two concrete classes (`Ball` and `Car`)** that:
+   - Extend `MovingObject`.
+   - Implement `ForceApplicable`.
+   - Maintain an attribute for `position` and implement `updatePosition(double time)`, using:
+     \[
+     s = ut + \frac{1}{2} a t^2
+     \]
+     Where:
+     - \( s \) is the displacement
+     - \( u \) is initial velocity
+     - \( a \) is acceleration
+     - \( t \) is time
+
+4. **Test your implementation** in a `main` method:
+   - Create a `Ball` and `Car` object.
+   - Apply force to both objects and update their positions.
+   - Print their new positions and velocities.
+
+---
+
+Would you like me to provide a full Java implementation of this? 😊
