@@ -11,13 +11,30 @@ public class Main {
         String outputFile = ".\\src\\amber\\output.txt";
 
         try {
+            //Cargar el reader del INPUT y el writer del OUTPUT
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
+
+            //Creamos variable que sea String
             String line;
-            while ((line = reader.readLine()) != null) {
-                line += 10;
-                String lineS = String.valueOf(line);
+
+            //While con condición de que la "línea" del reader no sea null
+            while ((line = reader.readLine()) != null){
+
+                //Parseamos "String line" into "int lineNum"
+                int lineNum = Integer.parseInt(line);
+
+                //Hacemos la operación
+                lineNum += 10;
+
+                //Pasamos de "int lineNum" into "String lineS"
+                String lineS = String.valueOf(lineNum);
+
+                //Escribimos "lineS"
                 writer.write(lineS);
+
+                //Agregamos una nueva línea
+                writer.newLine();
 
             }
             writer.close();
