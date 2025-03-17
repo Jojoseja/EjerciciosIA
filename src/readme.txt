@@ -1,0 +1,1 @@
+Para estos ejercicios se usan un archivo "input.txt" y se devuelve un archivo "output.txt"
